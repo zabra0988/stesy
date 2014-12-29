@@ -1,0 +1,21 @@
+<%= simple_form_for(@event) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :place %>
+    <%= f.input :type %>
+    <%= f.input :planner %>
+    <%= f.input :participants %>
+    <%= f.input :event_start %>
+    <%= f.input :event_end %>
+    <%= f.input :stand %>
+    <%= f.input :stand_start %>
+    <%= f.input :stand_end %>
+  </div>
+
+  # <div class="form-actions">
+  #  <%= f.button :submit %>
+  # </div>
+<% end %>

@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Description</th>
+      <th>Lieu</th>
+      <th>Type d'évènement</th>
+      <th>Organisateur de l'évèenement</th>
+      <th>Nombre de Participants</th>
+      <th>Début de l'évènement</th>
+      <th>Fin de l'évènement</th>
+      <th>Support Stesy</th>
+      <th>Date début Support</th>
+      <th>Date fin support</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.name %></td>
+        <td><%= event.description %></td>
+        <td><%= event.place %></td>
+        <td><%= event.event_type %></td>
+        <td><%= event.planner %></td>
+        <td><%= event.participants %></td>
+        <td><%= event.event_start %></td>
+        <td><%= event.event_end %></td>
+        <td><%= event.stand %></td>
+        <td><%= event.stand_start %></td>
+        <td><%= event.stand_end %></td>
+        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Créer un évènement', new_event_path %>

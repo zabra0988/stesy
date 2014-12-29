@@ -1,0 +1,21 @@
+<%= simple_form_for(@event) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name,label:'Nom de l\'évènement', required:true %>
+    <%= f.input :description, label:'Description de l\'évènement'%>
+    <%= f.input :place, label:'Lieu de l\'évènement',required:true %>
+    <%= f.input :event_type, label:'Type d\'évènement'%>
+    <%= f.input :planner, label:'Organisateur de l\'évènement',required:true %>
+    <%= f.input :participants, label:'Nombre de participants',required:true %>
+    <%= f.input :event_start, label: 'Début de l\'évènement',required:true %>
+    <%= f.input :event_end, label:'Fin de l\'évènement',required:true %>
+    <%= f.input :stand, label: 'Support Stesy' %>
+    <%= f.input :stand_start, label:'Début du support' %>
+    <%= f.input :stand_end, label:'Fin du support' %>
+  </div>
+
+  <div class="form-actions">
+  <%= f.button :submit,"Créer l'évènement" %>
+  </div>
+<% end %>
